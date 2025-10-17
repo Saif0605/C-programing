@@ -1,21 +1,20 @@
 #include <stdio.h>
 
-int main(){
+int main()
+{
 
-    int year,a,b,c;
+    int year;
 
     printf("Input:\n");
     scanf("%d", &year);
 
-    a= year%400;
-    b= year%4;
-    c= year%100;
-
-    if(a==0 || b==0 && c!=0){
-        printf("The year is leep year\n");
-    }else
+    if (year % 400 == 0 || year % 4 == 0 && year % 100 != 0)
     {
-        printf("The year is not leep year\n");
+        printf("%d is a Leap year\n", year);
+    }
+    else
+    {
+        printf("%d is not a Leap year\n", year);
     }
 
 
@@ -38,4 +37,5 @@ int main(){
 
     return 0;
 }
+
 
